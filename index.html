@@ -174,7 +174,7 @@
         /* Benefits Section */
         .benefits {
             padding: 5rem 0;
-            background: white;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         }
 
         .container {
@@ -215,11 +215,14 @@
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             text-align: center;
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(37, 99, 235, 0.1);
         }
 
         .benefit-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.2);
+            transform: translateY(-2px);
         }
 
         .benefit-icon {
@@ -230,6 +233,9 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 0.75rem;
+            border: 1px solid rgba(37, 99, 235, 0.2);
         }
 
         .benefit-card h3 {
@@ -244,10 +250,102 @@
             line-height: 1.6;
         }
 
+        /* Portfolio Section */
+        .portfolio {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-card {
+            background: white;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.05);
+        }
+
+        .portfolio-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .portfolio-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #6A1831 0%, #C6A7B0 100%);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin: 0;
+        }
+
+        .portfolio-info p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin: 0;
+        }
+
+        .portfolio-description {
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-link:hover {
+            color: #1d4ed8;
+        }
+
+        .portfolio-link::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-link:hover::after {
+            transform: translateX(3px);
+        }
+
         /* Contact Form Section */
         .contact {
             padding: 5rem 0;
-            background: #f9fafb;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         }
 
         .form-container {
@@ -259,7 +357,8 @@
             background: white;
             padding: 3rem;
             border-radius: 0.75rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.1);
         }
 
         .form-title {
@@ -354,14 +453,15 @@
         /* About Section */
         .about {
             padding: 5rem 0;
-            background: white;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
         }
 
         .about-card {
             background: white;
             padding: 3rem;
             border-radius: 0.75rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.1);
             display: flex;
             align-items: center;
             gap: 2rem;
@@ -370,7 +470,7 @@
         .about-avatar {
             width: 6rem;
             height: 6rem;
-            background: #eff6ff;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -378,6 +478,7 @@
             font-size: 2.5rem;
             color: #2563eb;
             flex-shrink: 0;
+            border: 2px solid rgba(37, 99, 235, 0.2);
         }
 
         .about-content h2 {
@@ -474,6 +575,15 @@
                 grid-template-columns: 1fr;
             }
 
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .portfolio-card {
+                padding: 1rem;
+            }
+
             .about-card {
                 flex-direction: column;
                 text-align: center;
@@ -517,7 +627,7 @@
         <div class="hero-content">
             <h1>Získejte osobní web za <span class="highlight">zlomek běžné ceny</span></h1>
             <p>Moderní web pro podnikatele, který vás bude reprezentovat – hotový během pár dní.</p>
-            <a href="#contact-form" class="cta-button">Chci nabídku</a>
+            <a href="#contact-form" class="cta-button">Chci více informací</a>
             
             <div class="trust-indicators">
                 <div class="trust-indicator">
@@ -559,7 +669,7 @@
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">💰</div>
-                    <h3>Férová cena</h3>
+                    <h3>Fér cena</h3>
                     <p>Kvalitní web za zlomek běžné ceny bez kompromisů</p>
                 </div>
                 
@@ -572,14 +682,42 @@
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Reference</h2>
+                <p>Podívejte se na některé z projektů, které jsem vytvořil</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <div class="portfolio-icon">🍷</div>
+                        <div class="portfolio-info">
+                            <h3>Vinný sklep Šmídovi</h3>
+                            <p>Ubytování & Turismus</p>
+                        </div>
+                    </div>
+                    <p class="portfolio-description">
+                        Moderní web pro ubytování s interaktivní galerií, cenovou kalkulačkou a responzivním designem.
+                    </p>
+                    <a href="https://www.ubytovani-smidovi.cz" target="_blank" class="portfolio-link">
+                        Prohlédnout web
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Form Section -->
     <section class="contact" id="contact-form">
         <div class="container">
             <div class="form-container">
                 <div class="form-card" id="contact-form-card">
                     <div class="form-title">
-                        <h2>Zanechte svůj e-mail a získejte nezávaznou nabídku</h2>
-                        <p>Vyplňte formulář a já se vám ozvu s konkrétní nabídkou pro Váš nový web</p>
+                        <h2>Zanechte svůj e-mail pro více informací</h2>
+                        <p>Vyplňte formulář a já se vám ozvu informacemi pro tvorbu Vašeho nového webu</p>
                     </div>
                     
                     <form id="contact-form">
@@ -598,7 +736,7 @@
                             <input type="text" id="business" name="business" class="form-input" placeholder="Např. finanční poradce, realitní makléř...">
                         </div>
                         
-                        <button type="submit" class="form-submit" id="submit-btn">Chci nabídku</button>
+                        <button type="submit" class="form-submit" id="submit-btn">Odeslat</button>
                     </form>
                 </div>
             </div>
@@ -612,8 +750,8 @@
                 <div class="about-avatar">👤</div>
                 <div class="about-content">
                     <h2>O mně</h2>
-                    <p><strong>Jmenuji se Dominik</strong> a jsem IT profesionál s více než <strong>5 lety zkušeností v oblasti komplexního IT vývoje.</strong></p>
-                    <p>Mám rozsáhlé zkušenosti s moderními technologiemi včetně <b>API, Java, C#, SQL, Kubernetes, HTML, React</b>  a dalších programovacích jazyků. Ve volném čase se věnuji školení datové analytiky a pomáhám ostatním rozvíjet jejich technické dovednosti.</p>
+                    <p>Jsem IT profesionál s více než <strong>5 lety zkušeností v oblasti komplexního IT vývoje.</strong></p>
+                    <p>Mám rozsáhlé zkušenosti s moderními technologiemi včetně <b>API, Java, C#, SQL, Kubernetes, HTML, React</b>  a dalších programovacích jazyků.</p>
                     <p><strong>Každý web tvořím osobně</strong> s důrazem na kvalitu, rychlost a jednoduchost. Specializuji se na jednoduché, ale efektivní weby pro finanční poradce, konzultanty, realitní makléře a freelancery, kteří potřebují profesionální prezentaci svých služeb.</p>
         
                 </div>
@@ -717,7 +855,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.benefit-card, .about-card').forEach(el => {
+        document.querySelectorAll('.benefit-card, .about-card, .portfolio-card').forEach(el => {
             observer.observe(el);
         });
     </script>
